@@ -1,0 +1,55 @@
+<div class="container">
+  
+    <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()" >
+        <div mat-dialog-content class="content">
+            <h3>ADD PATIENT INFORMATION</h3>
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>First name</mat-label>
+                    <input matInput type="text" placeholder="Ex. Technical" formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Middle Name</mat-label>
+                    <input matInput placeholder="Ex. Babaji" formControlName="middleName">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="Ex. Babaji" formControlName="lastName">
+                </mat-form-field>
+            </div>
+    
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>Contact Number</mat-label>
+                    <input matInput type="text" placeholder="9898787676" formControlName="contactNumber">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Age</mat-label>
+                    <input matInput type="number" placeholder="45" formControlName="age">
+                </mat-form-field>
+            </div>
+    
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>Urine Test Results</mat-label>
+                    <input matInput type="text" placeholder="Infected" formControlName="urineTestResults">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Blood Test Results</mat-label>
+                    <input matInput type="text" placeholder="Infected" formControlName="bloodTestResults">
+                </mat-form-field>
+            </div>
+            
+            <div class="row">
+                <mat-radio-group aria-label="Select an option" formControlName="gender">
+                    <mat-label><b>Gender</b></mat-label>
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                    <mat-radio-button value="others">Others</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <button  mat-raised-button color="primary" type="submit">Save & Submit</button>
+        </div>
+    </form>
+</div>
+
